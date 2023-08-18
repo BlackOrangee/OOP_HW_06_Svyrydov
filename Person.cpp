@@ -1,14 +1,9 @@
 #include "Person.h"
 
-// Setter function to set the person's name
-void Person::setName(string name)
+// Constructor for the Person class
+Person::Person(string name, int age)
 {
 	this->name = name;
-}
-
-// Setter function to set the person's age
-void Person::setAge(int age)
-{
 	this->age = age;
 }
 

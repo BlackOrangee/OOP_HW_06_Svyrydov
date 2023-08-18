@@ -1,12 +1,8 @@
 #include "Teacher.h"
 
 // Constructor for the Teacher class
-Teacher::Teacher(string name, int age, string subject)
+Teacher::Teacher(string name, int age, string subject) : Person(name, age)
 {
-	// Calling the base class setters to set name and age
-	setName(name);
-	setAge(age);
-
 	// Setting the subject
 	this->subject = subject;
 }

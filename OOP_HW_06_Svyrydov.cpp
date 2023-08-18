@@ -29,11 +29,11 @@ void EnterStudent(string& name, int& age)
 
 
 // Function to print information about an array of Person objects
-void Print(Person* clas)
+void Print(Person** clas)
 {
     for (int i = 0; i < 3; i++)
     {
-        clas[i].Print();  // Print information of each person object in the array
+        clas[i]->Print();  // Print information of each person object in the array
     }
 }
 
@@ -47,22 +47,20 @@ int main()
     string subject;
 
     // Create an array of Person objects
-    Person* clas = new Person[3];
+    Person** clas = new Person*[3];
 
     // Enter details for the first teacher
     EnterTeacher(name, age, subject);
-    Teacher t1(name, age, subject);
-    clas[0] = t1;
+    clas[0] = new Teacher(name, age, subject);
 
     // Enter details for the first student
     EnterStudent(name, age);
-    Student s1(name, age);
-    clas[1] = s1;
+    clas[1] = new Student(name, age);
 
     // Enter details for the second student
     EnterStudent(name, age);
     Student s2(name, age);
-    clas[2] = s2;
+    clas[2] = new Student(name, age);
 
     // Print the information of all persons in the array
     Print(clas);

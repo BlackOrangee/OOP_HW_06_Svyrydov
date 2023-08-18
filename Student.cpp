@@ -1,12 +1,8 @@
 #include "Student.h"
 
 // Constructor for the Student class
-Student::Student(string name, int age)
+Student::Student(string name, int age) : Person(name, age)
 {
-	// Calling the base class setters to set name and age
-	setName(name);
-	setAge(age);
-
 	// Generating random marks for each subject
 	for (int i = 0; i < 10; i++)
 	{

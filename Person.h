@@ -9,12 +9,9 @@ private:
 	int age;    // Variable to store the person's age
 
 public:
-	// Setter function to set the person's name
-	void setName(string name);
-
-	// Setter function to set the person's age
-	void setAge(int age);
-
+	// Constructor to initialize the person's name, age
+	Person(string, int);
+	
 	// Getter function to retrieve the person's name
 	string getName();
 
